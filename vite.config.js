@@ -8,4 +8,9 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host: 'localhost', // Or '0.0.0.0' for all interfaces
+        port: 5173, 
+        cors: true 
+      },
 });

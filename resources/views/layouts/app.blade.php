@@ -21,7 +21,7 @@
     
     @yield('content')
 
-    <script src="https://cdn.jsdelivr.net/npm/preline@2.7.0/dist/preline.min.js"></script>
+    <x-toaster-hub />
 </body>
 
 </html>

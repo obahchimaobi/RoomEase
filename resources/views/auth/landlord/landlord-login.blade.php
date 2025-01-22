@@ -5,21 +5,20 @@
     <div class="relative bg-gradient-to-bl from-blue-100 via-transparent dark:from-blue-950 dark:via-transparent">
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <!-- Grid -->
-            <div class="grid items-center md:grid-cols-2 gap-8 lg:gap-12">
+            <div class="grid items-center md:grid-cols-2 gap-8 lg:gap-12 h-screen">
                 <div>
                     <p
                         class="inline-block text-sm font-medium bg-clip-text bg-gradient-to-l from-blue-600 to-violet-500 text-transparent dark:from-blue-400 dark:to-violet-400">
-                        Preline: A vision for 2024
+                        RoomEase: List Your Property with Ease
                     </p>
 
                     <!-- Title -->
                     <div class="mt-4 md:mb-12 max-w-2xl">
                         <h1 class="mb-4 font-semibold text-gray-800 text-4xl lg:text-5xl dark:text-neutral-200">
-                            Fully customizable rules to match your unique needs
+                            Fully customizable options to match your rental preferences
                         </h1>
                         <p class="text-gray-600 dark:text-neutral-400">
-                            We provide you with a test account that can be set up in seconds. Our main focus is getting
-                            responses to you as soon as we can.
+                            We provide you with a seamless platform to list your properties and connect with verified tenants in seconds. Our main focus is ensuring a smooth and secure rental experience.
                         </p>
                     </div>
                     <!-- End Title -->
@@ -36,7 +35,7 @@
 
                         <div class="relative z-10">
                             <p class="text-xl italic text-gray-800 dark:text-white">
-                                Amazing people to work with. Very fast and professional partner.
+                                An excellent platform to find responsible tenants quickly. Hassle-free and efficient!
                             </p>
                         </div>
 
@@ -49,8 +48,8 @@
                                 </div>
                                 <div class="grow">
                                     <div class="font-semibold text-gray-800 dark:text-neutral-200">Josh Grazioso</div>
-                                    <div class="text-xs text-gray-500 dark:text-neutral-500">Director Payments & Risk |
-                                        Airbnb</div>
+                                    <div class="text-xs text-gray-500 dark:text-neutral-500">Property Owner |
+                                        {{ config('app.name') }}</div>
                                 </div>
                             </div>
                         </footer>

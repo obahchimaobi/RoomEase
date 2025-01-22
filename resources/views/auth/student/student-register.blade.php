@@ -9,17 +9,16 @@
                 <div>
                     <p
                         class="inline-block text-sm font-medium bg-clip-text bg-gradient-to-l from-blue-600 to-violet-500 text-transparent dark:from-blue-400 dark:to-violet-400">
-                        Preline: A vision for 2024
+                        RoomEase: Find Your Perfect Stay
                     </p>
 
                     <!-- Title -->
                     <div class="mt-4 md:mb-12 max-w-2xl">
                         <h1 class="mb-4 font-semibold text-gray-800 text-4xl lg:text-5xl dark:text-neutral-200">
-                            Fully customizable rules to match your unique needs
+                            Fully customizable listings to match your accommodation needs
                         </h1>
                         <p class="text-gray-600 dark:text-neutral-400">
-                            We provide you with a test account that can be set up in seconds. Our main focus is getting
-                            responses to you as soon as we can.
+                            We provide you with a seamless platform to find or list accommodations in seconds. Our main focus is making the process easy and efficient for you.
                         </p>
                     </div>
                     <!-- End Title -->
@@ -36,7 +35,7 @@
 
                         <div class="relative z-10">
                             <p class="text-xl italic text-gray-800 dark:text-white">
-                                Amazing people to work with. Very fast and professional partner.
+                                A reliable platform to connect students and landlords. Quick, simple, and trustworthy.
                             </p>
                         </div>
 
@@ -49,8 +48,8 @@
                                 </div>
                                 <div class="grow">
                                     <div class="font-semibold text-gray-800 dark:text-neutral-200">Josh Grazioso</div>
-                                    <div class="text-xs text-gray-500 dark:text-neutral-500">Director Payments & Risk |
-                                        Airbnb</div>
+                                    <div class="text-xs text-gray-500 dark:text-neutral-500">Student |
+                                        Nnamdi Azikiwe University</div>
                                 </div>
                             </div>
                         </footer>
