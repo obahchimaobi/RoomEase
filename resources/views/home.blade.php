@@ -255,20 +255,28 @@
   dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
   [&::-webkit-scrollbar-thumb]:rounded-full
   [&::-webkit-scrollbar-track]:rounded-full">
-            <div class="flex-shrink-0 w-52 sm:w-44 md:w-48 lg:w-64">
-                <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70"
+            <div class="flex-shrink-0 w-52 sm:w-44 md:w-48 lg:w-72">
+                <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-800 dark:shadow-neutral-700/70"
                     href="#">
-                    <img class="w-full h-auto rounded-t-xl"
+                    <img class="w-full h-56 rounded-t-xl"
                         src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
                         alt="Card Image">
-                    <div class="p-4 md:p-5">
+                    <div class="p-4 md:p-5 text-start">
                         <h3 class="text-lg font-bold text-gray-800 dark:text-white">
                             Card title
                         </h3>
-                        <p class="mt-1 text-gray-500 dark:text-neutral-400">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                        </p>
+                        <div class="flex items-center gap-x-1 mt-4 dark:text-white/60">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                              </svg>
+                              <span>Ifite</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div>
+                                <h1 class="dark:text-white/90 font-semibold text-xl">140,200</h1>
+                            </div>
+                        </div>
                     </div>
                 </a>
             </div>
