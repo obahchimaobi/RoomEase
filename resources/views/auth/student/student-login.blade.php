@@ -71,7 +71,7 @@
                                     <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
                                         Don't have an account yet?
                                         <a class="text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
-                                            href="{{ route('landlord.register') }}">
+                                            href="{{ route('student.register') }}">
                                             Sign up here
                                         </a>
                                     </p>

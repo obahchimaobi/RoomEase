@@ -68,12 +68,7 @@
                         <div class="whitespace-nowrap pt-2 sm:pt-0 grid sm:block">
                             <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                                 href="#">
-                                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8" />
-                                    <path d="m21 21-4.3-4.3" />
-                                </svg>
+                                Search
                             </a>
                         </div>
                     </div>
@@ -140,6 +135,356 @@
   dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
   [&::-webkit-scrollbar-thumb]:rounded-full
   [&::-webkit-scrollbar-track]:rounded-full">
+            <div class="flex-shrink-0 w-72 lg:w-80">
+                <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-transparent dark:shadow-neutral-700/70"
+                    href="#">
+                    <img class="w-full h-52 rounded-t-xl"
+                        src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                        alt="Card Image">
+                    <div class="p-4 md:p-5 text-start">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                            Westrift Kretya home living manhattan, Autography Collection
+                        </h3>
+                        <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                            <span>Ifite</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-5">
+                            <div>
+                                <h1 class="dark:text-white/90 font-semibold text-xl text-neutral-800">140,200</h1>
+                                <span class="dark:text-neutral-500 text-sm font-semibold text-neutral-500">To Pay:
+                                    140,200</span>
+                            </div>
+
+                            <button type="button"
+                                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                                View Room
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-shrink-0 w-72 lg:w-80">
+                <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-transparent dark:shadow-neutral-700/70"
+                    href="#">
+                    <img class="w-full h-52 rounded-t-xl"
+                        src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                        alt="Card Image">
+                    <div class="p-4 md:p-5 text-start">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                            Westrift Kretya home living manhattan, Autography Collection
+                        </h3>
+                        <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                            <span>Ifite</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-5">
+                            <div>
+                                <h1 class="dark:text-white/90 font-semibold text-xl text-neutral-800">140,200</h1>
+                                <span class="dark:text-neutral-500 text-sm font-semibold text-neutral-500">To Pay:
+                                    140,200</span>
+                            </div>
+
+                            <button type="button"
+                                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                                View Room
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-shrink-0 w-72 lg:w-80">
+                <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-transparent dark:shadow-neutral-700/70"
+                    href="#">
+                    <img class="w-full h-52 rounded-t-xl"
+                        src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                        alt="Card Image">
+                    <div class="p-4 md:p-5 text-start">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                            Westrift Kretya home living manhattan, Autography Collection
+                        </h3>
+                        <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                            <span>Ifite</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-5">
+                            <div>
+                                <h1 class="dark:text-white/90 font-semibold text-xl text-neutral-800">140,200</h1>
+                                <span class="dark:text-neutral-500 text-sm font-semibold text-neutral-500">To Pay:
+                                    140,200</span>
+                            </div>
+
+                            <button type="button"
+                                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                                View Room
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-shrink-0 w-72 lg:w-80">
+                <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-transparent dark:shadow-neutral-700/70"
+                    href="#">
+                    <img class="w-full h-52 rounded-t-xl"
+                        src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                        alt="Card Image">
+                    <div class="p-4 md:p-5 text-start">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                            Westrift Kretya home living manhattan, Autography Collection
+                        </h3>
+                        <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                            <span>Ifite</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-5">
+                            <div>
+                                <h1 class="dark:text-white/90 font-semibold text-xl text-neutral-800">140,200</h1>
+                                <span class="dark:text-neutral-500 text-sm font-semibold text-neutral-500">To Pay:
+                                    140,200</span>
+                            </div>
+
+                            <button type="button"
+                                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                                View Room
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-shrink-0 w-72 lg:w-80">
+                <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-transparent dark:shadow-neutral-700/70"
+                    href="#">
+                    <img class="w-full h-52 rounded-t-xl"
+                        src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                        alt="Card Image">
+                    <div class="p-4 md:p-5 text-start">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                            Westrift Kretya home living manhattan, Autography Collection
+                        </h3>
+                        <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                            <span>Ifite</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-5">
+                            <div>
+                                <h1 class="dark:text-white/90 font-semibold text-xl text-neutral-800">140,200</h1>
+                                <span class="dark:text-neutral-500 text-sm font-semibold text-neutral-500">To Pay:
+                                    140,200</span>
+                            </div>
+
+                            <button type="button"
+                                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                                View Room
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-shrink-0 w-72 lg:w-80">
+                <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-transparent dark:shadow-neutral-700/70"
+                    href="#">
+                    <img class="w-full h-52 rounded-t-xl"
+                        src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                        alt="Card Image">
+                    <div class="p-4 md:p-5 text-start">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                            Westrift Kretya home living manhattan, Autography Collection
+                        </h3>
+                        <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                            <span>Ifite</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-5">
+                            <div>
+                                <h1 class="dark:text-white/90 font-semibold text-xl text-neutral-800">140,200</h1>
+                                <span class="dark:text-neutral-500 text-sm font-semibold text-neutral-500">To Pay:
+                                    140,200</span>
+                            </div>
+
+                            <button type="button"
+                                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                                View Room
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-shrink-0 w-72 lg:w-80">
+                <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-transparent dark:shadow-neutral-700/70"
+                    href="#">
+                    <img class="w-full h-52 rounded-t-xl"
+                        src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                        alt="Card Image">
+                    <div class="p-4 md:p-5 text-start">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                            Westrift Kretya home living manhattan, Autography Collection
+                        </h3>
+                        <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                            <span>Ifite</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-5">
+                            <div>
+                                <h1 class="dark:text-white/90 font-semibold text-xl text-neutral-800">140,200</h1>
+                                <span class="dark:text-neutral-500 text-sm font-semibold text-neutral-500">To Pay:
+                                    140,200</span>
+                            </div>
+
+                            <button type="button"
+                                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                                View Room
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-shrink-0 w-72 lg:w-80">
+                <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-transparent dark:shadow-neutral-700/70"
+                    href="#">
+                    <img class="w-full h-52 rounded-t-xl"
+                        src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                        alt="Card Image">
+                    <div class="p-4 md:p-5 text-start">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                            Westrift Kretya home living manhattan, Autography Collection
+                        </h3>
+                        <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                            <span>Ifite</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-5">
+                            <div>
+                                <h1 class="dark:text-white/90 font-semibold text-xl text-neutral-800">140,200</h1>
+                                <span class="dark:text-neutral-500 text-sm font-semibold text-neutral-500">To Pay:
+                                    140,200</span>
+                            </div>
+
+                            <button type="button"
+                                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                                View Room
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-shrink-0 w-72 lg:w-80">
+                <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-transparent dark:shadow-neutral-700/70"
+                    href="#">
+                    <img class="w-full h-52 rounded-t-xl"
+                        src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                        alt="Card Image">
+                    <div class="p-4 md:p-5 text-start">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                            Westrift Kretya home living manhattan, Autography Collection
+                        </h3>
+                        <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                            <span>Ifite</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-5">
+                            <div>
+                                <h1 class="dark:text-white/90 font-semibold text-xl text-neutral-800">140,200</h1>
+                                <span class="dark:text-neutral-500 text-sm font-semibold text-neutral-500">To Pay:
+                                    140,200</span>
+                            </div>
+
+                            <button type="button"
+                                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                                View Room
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-shrink-0 w-72 lg:w-80">
+                <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-transparent dark:shadow-neutral-700/70"
+                    href="#">
+                    <img class="w-full h-52 rounded-t-xl"
+                        src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                        alt="Card Image">
+                    <div class="p-4 md:p-5 text-start">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                            Westrift Kretya home living manhattan, Autography Collection
+                        </h3>
+                        <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                            <span>Ifite</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-5">
+                            <div>
+                                <h1 class="dark:text-white/90 font-semibold text-xl text-neutral-800">140,200</h1>
+                                <span class="dark:text-neutral-500 text-sm font-semibold text-neutral-500">To Pay:
+                                    140,200</span>
+                            </div>
+
+                            <button type="button"
+                                class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                                View Room
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
             <div class="flex-shrink-0 w-72 lg:w-80">
                 <a class="flex flex-col bg-white border rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-transparent dark:shadow-neutral-700/70"
                     href="#">

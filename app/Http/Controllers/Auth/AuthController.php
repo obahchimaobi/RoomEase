@@ -12,4 +12,19 @@ class AuthController extends Controller
     {
         return view('auth.landlord.landlord-register');
     }
+
+    public function landlord_login()
+    {
+        return view('auth.landlord.landlord-login');
+    }
+
+    public function student_register()
+    {
+        return view('auth.student.student-register');
+    }
+
+    public function student_login()
+    {
+        return view('auth.student.student-login');
+    }
 }

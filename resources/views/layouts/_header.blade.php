@@ -43,12 +43,12 @@
                 <div class="hs-dropdown-menu transition-[opacity,margin] border duration hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-10 mt-2 min-w-60 bg-white shadow-md rounded-lg p-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700"
                     role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-example">
                     <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-                        href="#">
+                        href="{{ route('landlord.login') }}">
 
                         As a landlord
                     </a>
                     <a class="flex items-center gap-x-2.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-                        href="#">
+                        href="{{ route('student.login') }}">
 
                         As a student
                     </a>
@@ -71,12 +71,12 @@
                 <div class="hs-dropdown-menu transition-[opacity,margin] border duration hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-10 mt-2 min-w-52 bg-white shadow-md rounded-lg p-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700"
                     role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-example">
                     <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-                        href="#">
+                        href="{{ route('landlord.register') }}">
 
                         As a landlord
                     </a>
                     <a class="flex items-center gap-x-2.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-                        href="">
+                        href="{{ route('student.register') }}">
 
                         As a student
                     </a>
