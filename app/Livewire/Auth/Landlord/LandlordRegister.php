@@ -3,8 +3,11 @@
 namespace App\Livewire\Auth\Landlord;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
 use Livewire\Component;
 use Masmerise\Toaster\Toaster;
+use Illuminate\Support\Facades\Mail;
 
 class LandlordRegister extends Component
 {
@@ -37,8 +40,19 @@ class LandlordRegister extends Component
             'password' => $validate['password'],
             'type' => 'landlord',
         ]);
+        
+        $email = $validate['email'];
+        $hash = sha1($email);
 
-        Toaster::success('Registration successful!');
+        $verificationUrl = URL::temporarySignedRoute(
+            'landlord.email.verify',
+            now()->addMinutes(10),
+            ['email' => $email, 'hash' => $hash],
+        );
+
+        Mail::to($validate['email'])->send(new \App\Mail\Landlord\LandlordRegister($name, $email, $hash, $verificationUrl));
+
+        return Redirect::route('landlord.login')->success('A confirmation email has been sent to '.$validate['email'].'. Click the verification link sent to your email to complete the verification process.');
     }
 
     public function render()

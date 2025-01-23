@@ -1,5 +1,5 @@
 <!-- ========== HEADER ========== -->
-<header class="flex flex-wrap lg:justify-start lg:flex-nowrap z-50 w-full py-7">
+<header class="flex flex-wrap lg:justify-start lg:flex-nowrap z-50 w-full py-3">
     <nav
         class="relative max-w-7xl w-full flex flex-wrap lg:grid lg:grid-cols-12 basis-full items-center px-4 md:px-6 lg:px-8 mx-auto">
         <div class="lg:col-span-3 flex items-center">
