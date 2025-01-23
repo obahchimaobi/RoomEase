@@ -19,8 +19,7 @@
                 <div class="mt-5">
                     <button type="button"
                         class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-                        <svg class="w-4 h-auto" width="46" height="47" viewBox="0 0 46 47"
-                            fill="none">
+                        <svg class="w-4 h-auto" width="46" height="47" viewBox="0 0 46 47" fill="none">
                             <path
                                 d="M46 24.0287C46 22.09 45.8533 20.68 45.5013 19.2112H23.4694V27.9356H36.4069C36.1429 30.1094 34.7347 33.37 31.5957 35.5731L31.5663 35.8669L38.5191 41.2719L38.9885 41.3306C43.4477 37.2181 46 31.1669 46 24.0287Z"
                                 fill="#4285F4"></path>
@@ -55,7 +54,7 @@
         [&:not(:placeholder-shown)]:pb-2
         autofill:pt-6
         autofill:pb-2"
-                                    placeholder="John">
+                                    placeholder="John" wire:model='first_name'>
                                 <label for="hs-hero-signup-form-floating-input-first-name"
                                     class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] dark:text-white peer-disabled:opacity-50 peer-disabled:pointer-events-none
           peer-focus:scale-90
@@ -69,6 +68,10 @@
                                     name</label>
                             </div>
                             <!-- End Floating Input -->
+
+                            @error('first_name')
+                                <p class="text-sm text-red-500">{{ $message }}</p>
+                            @enderror
                         </div>
                         <!-- End Input Group -->
 
@@ -84,7 +87,7 @@
         [&:not(:placeholder-shown)]:pb-2
         autofill:pt-6
         autofill:pb-2"
-                                    placeholder="Doe">
+                                    placeholder="Doe" wire:model='last_name'>
                                 <label for="hs-hero-signup-form-floating-input-last-name"
                                     class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] dark:text-white peer-disabled:opacity-50 peer-disabled:pointer-events-none
           peer-focus:scale-90
@@ -98,23 +101,27 @@
                                     name</label>
                             </div>
                             <!-- End Floating Input -->
+
+                            @error('last_name')
+                                <p class="text-sm text-red-500">{{ $message }}</p>
+                            @enderror
                         </div>
                         <!-- End Input Group -->
 
                         <!-- Input Group -->
-                            <!-- Floating Input -->
-                            <div class="relative col-span-full">
-                                <input type="email" id="hs-hero-signup-form-floating-input-email"
-                                    class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:focus:ring-blue-600
+                        <!-- Floating Input -->
+                        <div class="relative col-span-full">
+                            <input type="email" id="hs-hero-signup-form-floating-input-email"
+                                class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:focus:ring-blue-600
         focus:pt-6
         focus:pb-2
         [&:not(:placeholder-shown)]:pt-6
         [&:not(:placeholder-shown)]:pb-2
         autofill:pt-6
         autofill:pb-2"
-                                    placeholder="you@email.com">
-                                <label for="hs-hero-signup-form-floating-input-email"
-                                    class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] dark:text-white peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                placeholder="you@email.com" wire:model='email'>
+                            <label for="hs-hero-signup-form-floating-input-email"
+                                class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] dark:text-white peer-disabled:opacity-50 peer-disabled:pointer-events-none
           peer-focus:scale-90
           peer-focus:translate-x-0.5
           peer-focus:-translate-y-1.5
@@ -123,8 +130,12 @@
           peer-[:not(:placeholder-shown)]:translate-x-0.5
           peer-[:not(:placeholder-shown)]:-translate-y-1.5
           peer-[:not(:placeholder-shown)]:text-gray-500 dark:peer-[:not(:placeholder-shown)]:text-neutral-500 dark:text-neutral-500">Email</label>
-                            </div>
-                            <!-- End Floating Input -->
+                        </div>
+                        <!-- End Floating Input -->
+
+                        @error('email')
+                            <p class="text-sm text-red-500">{{ $message }}</p>
+                        @enderror
                         <!-- End Input Group -->
 
                         <!-- Input Group -->
@@ -139,7 +150,7 @@
         [&:not(:placeholder-shown)]:pb-2
         autofill:pt-6
         autofill:pb-2"
-                                    placeholder="********">
+                                    placeholder="********" wire:model='password'>
                                 <label for="hs-hero-signup-form-floating-input-new-password"
                                     class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] dark:text-white peer-disabled:opacity-50 peer-disabled:pointer-events-none
           peer-focus:scale-90
@@ -152,6 +163,10 @@
           peer-[:not(:placeholder-shown)]:text-gray-500 dark:peer-[:not(:placeholder-shown)]:text-neutral-500 dark:text-neutral-500">Password</label>
                             </div>
                             <!-- End Floating Input -->
+
+                            @error('password')
+                                <p class="text-sm text-red-500">{{ $message }}</p>
+                            @enderror
 
                             <div id="hs-strong-password-popover"
                                 class="hidden absolute z-10 w-full bg-gray-100 rounded-lg p-4 dark:bg-neutral-950">
@@ -174,18 +189,17 @@
                                         class="hs-strong-password-active:text-teal-500 flex items-center gap-x-2">
                                         <span class="hidden" data-check>
                                             <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
-                                                width="24" height="24" viewBox="0 0 24 24"
-                                                fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <polyline points="20 6 9 17 4 12" />
                                             </svg>
                                         </span>
                                         <span data-uncheck>
-                                            <svg class="shrink-0 size-4"
-                                                xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <path d="M18 6 6 18" />
                                                 <path d="m6 6 12 12" />
                                             </svg>
@@ -195,20 +209,18 @@
                                     <li data-hs-strong-password-hints-rule-text="lowercase"
                                         class="hs-strong-password-active:text-teal-500 flex items-center gap-x-2">
                                         <span class="hidden" data-check>
-                                            <svg class="shrink-0 size-4"
-                                                xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <polyline points="20 6 9 17 4 12" />
                                             </svg>
                                         </span>
                                         <span data-uncheck>
-                                            <svg class="shrink-0 size-4"
-                                                xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <path d="M18 6 6 18" />
                                                 <path d="m6 6 12 12" />
                                             </svg>
@@ -218,20 +230,18 @@
                                     <li data-hs-strong-password-hints-rule-text="uppercase"
                                         class="hs-strong-password-active:text-teal-500 flex items-center gap-x-2">
                                         <span class="hidden" data-check>
-                                            <svg class="shrink-0 size-4"
-                                                xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <polyline points="20 6 9 17 4 12" />
                                             </svg>
                                         </span>
                                         <span data-uncheck>
-                                            <svg class="shrink-0 size-4"
-                                                xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <path d="M18 6 6 18" />
                                                 <path d="m6 6 12 12" />
                                             </svg>
@@ -241,20 +251,18 @@
                                     <li data-hs-strong-password-hints-rule-text="numbers"
                                         class="hs-strong-password-active:text-teal-500 flex items-center gap-x-2">
                                         <span class="hidden" data-check>
-                                            <svg class="shrink-0 size-4"
-                                                xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <polyline points="20 6 9 17 4 12" />
                                             </svg>
                                         </span>
                                         <span data-uncheck>
-                                            <svg class="shrink-0 size-4"
-                                                xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <path d="M18 6 6 18" />
                                                 <path d="m6 6 12 12" />
                                             </svg>
@@ -264,20 +272,18 @@
                                     <li data-hs-strong-password-hints-rule-text="special-characters"
                                         class="hs-strong-password-active:text-teal-500 flex items-center gap-x-2">
                                         <span class="hidden" data-check>
-                                            <svg class="shrink-0 size-4"
-                                                xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <polyline points="20 6 9 17 4 12" />
                                             </svg>
                                         </span>
                                         <span data-uncheck>
-                                            <svg class="shrink-0 size-4"
-                                                xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
                                                 <path d="M18 6 6 18" />
                                                 <path d="m6 6 12 12" />
                                             </svg>
@@ -293,8 +299,7 @@
                         <div class="col-span-full">
                             <!-- Floating Input -->
                             <div class="relative">
-                                <input type="password"
-                                    id="hs-hero-signup-form-floating-input-current-password"
+                                <input type="password" id="hs-hero-signup-form-floating-input-current-password"
                                     class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:focus:ring-blue-600
         focus:pt-6
         focus:pb-2
@@ -302,14 +307,15 @@
         [&:not(:placeholder-shown)]:pb-2
         autofill:pt-6
         autofill:pb-2"
-                                    placeholder="********">
+                                    placeholder="********" wire:model='password_confirmation'>
                                 <label for="hs-hero-signup-form-floating-input-current-password"
                                     class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] dark:text-white peer-disabled:opacity-50 peer-disabled:pointer-events-none peer-focus:scale-90 peer-focus:translate-x-0.5 peer-focus:-translate-y-1.5
           peer-focus:text-gray-500 dark:peer-focus:text-neutral-500
           peer-[:not(:placeholder-shown)]:scale-90
           peer-[:not(:placeholder-shown)]:translate-x-0.5
           peer-[:not(:placeholder-shown)]:-translate-y-1.5
-          peer-[:not(:placeholder-shown)]:text-gray-500 dark:peer-[:not(:placeholder-shown)]:text-neutral-500 dark:text-neutral-500">Confirm password</label>
+          peer-[:not(:placeholder-shown)]:text-gray-500 dark:peer-[:not(:placeholder-shown)]:text-neutral-500 dark:text-neutral-500">Confirm
+                                    password</label>
                             </div>
                             <!-- End Floating Input -->
                         </div>
@@ -321,7 +327,8 @@
                     <div class="mt-5 flex items-center">
                         <div class="flex">
                             <input id="remember-me" name="remember-me" type="checkbox"
-                                class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                                class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                                wire:model='checkbox'>
                         </div>
                         <div class="ms-3">
                             <label for="remember-me" class="text-sm dark:text-white">I accept the <a
@@ -330,11 +337,20 @@
                         </div>
                     </div>
                     <!-- End Checkbox -->
+                    @error('checkbox')
+                        <p class="text-sm text-red-500">{{ $message }}</p>
+                    @enderror
 
                     <div class="mt-5">
                         <button type="submit"
                             class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Get
-                            started</button>
+                            started
+
+                            <div class="animate-spin inline-block size-4 border-[3px] border-current border-t-transparent text-white rounded-full dark:text-white"
+                                role="status" aria-label="loading" wire:loading>
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
