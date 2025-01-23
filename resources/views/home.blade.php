@@ -3,7 +3,17 @@
 @section('content')
     @include('layouts._header')
     <!-- Hero -->
-    <div class="overflow-hidden">
+    <div class="overflow-hidden relative">
+        <!-- Gradients -->
+        <div aria-hidden="true" class="flex absolute -top-96 start-1/2 transform -translate-x-1/2">
+            <div
+                class="bg-gradient-to-r from-violet-300/50 to-purple-100 blur-3xl w-[25rem] h-[44rem] rotate-[-60deg] transform -translate-x-[10rem] dark:from-violet-900/50 dark:to-purple-900">
+            </div>
+            <div
+                class="bg-gradient-to-tl from-blue-50 via-blue-100 to-blue-50 blur-3xl w-[90rem] h-[50rem] rounded-fulls origin-top-left -rotate-12 -translate-x-[15rem] dark:from-indigo-900/70 dark:via-indigo-900/70 dark:to-blue-900/70">
+            </div>
+        </div>
+        <!-- End Gradients -->
         <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
                 <!-- Title -->
@@ -181,8 +191,8 @@
                             Westrift Kretya home living manhattan, Autography Collection
                         </h3>
                         <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-4 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -216,8 +226,8 @@
                             Westrift Kretya home living manhattan, Autography Collection
                         </h3>
                         <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-4 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -251,8 +261,8 @@
                             Westrift Kretya home living manhattan, Autography Collection
                         </h3>
                         <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-4 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -286,8 +296,8 @@
                             Westrift Kretya home living manhattan, Autography Collection
                         </h3>
                         <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-4 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -321,8 +331,8 @@
                             Westrift Kretya home living manhattan, Autography Collection
                         </h3>
                         <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-4 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -356,8 +366,8 @@
                             Westrift Kretya home living manhattan, Autography Collection
                         </h3>
                         <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-4 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -391,8 +401,8 @@
                             Westrift Kretya home living manhattan, Autography Collection
                         </h3>
                         <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-4 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -426,8 +436,8 @@
                             Westrift Kretya home living manhattan, Autography Collection
                         </h3>
                         <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-4 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -461,8 +471,8 @@
                             Westrift Kretya home living manhattan, Autography Collection
                         </h3>
                         <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-4 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -496,8 +506,8 @@
                             Westrift Kretya home living manhattan, Autography Collection
                         </h3>
                         <div class="flex items-center gap-x-0.5 mt-4 dark:text-white/60 text-neutral-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-4 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 <path stroke-linecap="round" stroke-linejoin="round"
