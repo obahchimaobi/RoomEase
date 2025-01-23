@@ -17,7 +17,7 @@
 
 </head>
 
-<body class="dark:bg-neutral-950 font-inter text-sm">
+<body class="dark:bg-neutral-950 font-inter text-sm subpixel-antialiased">
     
     @yield('content')
 

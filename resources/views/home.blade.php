@@ -125,7 +125,7 @@
     </div>
     <!-- End Hero -->
 
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mt-6">
         <div class="mb-7 flex items-center justify-between">
             <h1 class="dark:text-neutral-200 font-semibold sm:text-3xl text-xl">Available Rooms</h1>
 
