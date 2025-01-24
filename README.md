@@ -57,7 +57,7 @@ Ensure you have the following installed on your machine:
 - PHP (>=8.0)
 - Composer
 - Laravel Framework
-- MySQL or PostgreSQL
+- MySQL
 - Node.js & npm
 
 ### Steps
