@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\Landlord\LandlordController;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
@@ -86,3 +87,6 @@ Route::get('/student/reset/password', function () {
 
     return view('email.student.student-reset-password-form');
 })->middleware('signed')->name('student.password.reset');
+
+// Landlord Dashboard
+Route::get('/landlord/dashboard', [LandlordController::class, 'landlord_dashboard'])->name('landlord.dashboard');
