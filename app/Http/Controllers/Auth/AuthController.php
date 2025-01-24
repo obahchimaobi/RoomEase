@@ -31,4 +31,9 @@ class AuthController extends Controller
     {
         return view('auth.student.student-login');
     }
+
+    public function student_reset_password()
+    {
+        return view('auth.student.student-reset-password');
+    }
 }

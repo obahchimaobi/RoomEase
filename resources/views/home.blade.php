@@ -23,7 +23,7 @@
                     </p>
                     <h1
                         class="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight dark:text-neutral-200">
-                        Turn online shoppers into <span class="text-blue-500">lifetime customers</span>
+                        Turn house seekers into <br> <span class="text-blue-500">happy tenants</span>
                     </h1>
                 </div>
                 <!-- End Title -->
@@ -59,7 +59,7 @@
 
                     <div class="pt-5 sm:pt-0 sm:ps-5">
                         <div class="text-lg font-semibold text-gray-800 dark:text-neutral-200">Trust pilot</div>
-                        <div class="text-sm text-gray-500 dark:text-neutral-500">Rated best over 37k reviews</div>
+                        <div class="text-sm text-gray-500 dark:text-neutral-500">Trusted by thousands of students and landlords.</div>
                     </div>
                 </div>
                 <!-- End Avatar Group -->

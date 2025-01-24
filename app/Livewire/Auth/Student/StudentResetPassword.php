@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Auth\Landlord;
+namespace App\Livewire\Auth\Student;
 
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -10,11 +10,11 @@ use Illuminate\Support\Str;
 use Livewire\Component;
 use Masmerise\Toaster\Toaster;
 
-class LandlordResetPassword extends Component
+class StudentResetPassword extends Component
 {
     public $email;
 
-    public function landlord_reset_password()
+    public function student_reset_password()
     {
         $validate = $this->validate([
             'email' => 'required|email',
@@ -40,12 +40,12 @@ class LandlordResetPassword extends Component
             );
 
             $resetPasswordLink = URL::temporarySignedRoute(
-                'landlord.password.reset',
+                'student.password.reset',
                 now()->addMinutes(5),
                 ['token' => $token],
             );
 
-            Mail::to($email)->send(new \App\Mail\Landlord\LandlordResetPassword($name, $email, $resetPasswordLink));
+            Mail::to($email)->send(new \App\Mail\Student\StudentResetPassword($name, $email, $resetPasswordLink));
 
             Toaster::success('A password reset link has been sent to your '.$email.'. Check your inbox.');
 
@@ -55,6 +55,6 @@ class LandlordResetPassword extends Component
 
     public function render()
     {
-        return view('livewire.auth.landlord.landlord-reset-password');
+        return view('livewire.auth.student.student-reset-password');
     }
 }

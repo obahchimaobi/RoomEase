@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Auth\Landlord;
+namespace App\Livewire\Auth\Student;
 
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -11,7 +11,7 @@ use Livewire\Attributes\Url;
 use Livewire\Component;
 use Masmerise\Toaster\Toaster;
 
-class ResetPasswordForm extends Component
+class StudentResetPasswordForm extends Component
 {
     #[Url(as: 'token')]
     public $token = '';
@@ -20,7 +20,7 @@ class ResetPasswordForm extends Component
 
     public $password_confirmation;
 
-    public function landlord_reset_password()
+    public function student_reset_password()
     {
         $validate = $this->validate([
             'password' => 'required|min:6|confirmed',
@@ -44,11 +44,11 @@ class ResetPasswordForm extends Component
         // Delete the token after successful reset
         DB::table('password_reset_tokens')->where('email', $resetRequest->email)->delete();
 
-        return Redirect::route('landlord.login')->success('Your password has been updated successfully.');
+        return Redirect::route('student.login')->success('Your password has been updated successfully.');
     }
 
     public function render()
     {
-        return view('livewire.auth.landlord.reset-password-form');
+        return view('livewire.auth.student.student-reset-password-form');
     }
 }

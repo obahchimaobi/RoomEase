@@ -1,11 +1,11 @@
 <?php
 
-use App\Models\User;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Home\HomeController;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
@@ -57,14 +57,32 @@ Route::get('/landlord/reset/password', function () {
 
     $request_token = DB::table('password_reset_tokens')->where('token', $token)->first();
 
-    if (!$request_token) {
+    if (! $request_token) {
         abort(403);
+
         return;
     }
 
     return view('email.landlord.reset-password-form');
-})->middleware('signed')->name('password.reset');
+})->middleware('signed')->name('landlord.password.reset');
 
 // Student Auth
 Route::get('/register/student', [AuthController::class, 'student_register'])->name('student.register');
 Route::get('/login/student', [AuthController::class, 'student_login'])->name('student.login');
+Route::get('/forgot-password/student', [AuthController::class, 'student_reset_password'])->name('student.forgot.password');
+
+// Studente Reset Password Link
+Route::get('/student/reset/password', function () {
+    // get the token from the url
+    $token = request()->query('token');
+
+    $request_token = DB::table('password_reset_tokens')->where('token', $token)->first();
+
+    if (! $request_token) {
+        abort(403);
+
+        return;
+    }
+
+    return view('email.student.student-reset-password-form');
+})->middleware('signed')->name('student.password.reset');

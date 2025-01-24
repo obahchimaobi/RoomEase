@@ -15,9 +15,18 @@ class StudentResetPassword extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public $name;
+
+    public $email;
+
+    public $resetPasswordLink;
+
+    public function __construct($name, $email, $resetPasswordLink)
     {
         //
+        $this->name = $name;
+        $this->email = $email;
+        $this->resetPasswordLink = $resetPasswordLink;
     }
 
     /**
@@ -26,7 +35,7 @@ class StudentResetPassword extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Student Reset Password',
+            subject: 'Reset Your Password',
         );
     }
 
@@ -36,7 +45,7 @@ class StudentResetPassword extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            markdown: 'email.student.reset-password',
         );
     }
 

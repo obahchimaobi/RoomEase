@@ -114,10 +114,7 @@
                             </div>
                         </div>
 
-                        <a class="text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
-                            aria-haspopup="dialog" aria-expanded="false"
-                            aria-controls="hs-slide-down-animation-modal"
-                            data-hs-overlay="#hs-slide-down-animation-modal" href="#">Forgot
+                        <a class="text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="{{ route('student.forgot.password') }}">Forgot
                             Password?</a>
                     </div>
                     <!-- End Checkbox -->
