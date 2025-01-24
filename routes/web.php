@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Home\HomeController;
-use App\Models\User;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
@@ -50,22 +51,18 @@ Route::get('/student/email/verify/{email}/{hash}', function ($email, $hash) {
 })->middleware('signed')->name('student.email.verify');
 
 // Landlord Reset Password Link
-Route::get('/landlord/reset/password/{email}/{hash}', function ($email, $hash) {
-    // $user = User::where('email', $email)->firstOrFail();
+Route::get('/landlord/reset/password', function () {
+    // get the token from the url
+    $token = request()->query('token');
 
-    // if (! hash_equals(sha1($user->email), $hash)) {
-    //     abort(403, 'Invalid verification link.');
-    // }
+    $request_token = DB::table('password_reset_tokens')->where('token', $token)->first();
 
-    // if ($user->email_verified_at) {
-    //     return Redirect::route('landlord.login')->error('Your email has already been verified.');
-    // }
+    if (!$request_token) {
+        abort(403);
+        return;
+    }
 
-    // // $user->update(['email_verified_at' => now()]);
-    // $user->email_verified_at = now();
-    // $user->save();
-
-    // return Redirect::route('landlord.login')->success('Your email has been successfully verified.');
+    return view('email.landlord.reset-password-form');
 })->middleware('signed')->name('password.reset');
 
 // Student Auth

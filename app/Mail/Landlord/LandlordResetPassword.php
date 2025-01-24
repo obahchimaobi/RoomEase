@@ -19,16 +19,13 @@ class LandlordResetPassword extends Mailable
 
     public $email;
 
-    public $hash;
-
     public $resetPasswordLink;
 
-    public function __construct($name, $email, $hash, $resetPasswordLink)
+    public function __construct($name, $email, $resetPasswordLink)
     {
         //
         $this->name = $name;
         $this->email = $email;
-        $this->hash = $hash;
         $this->resetPasswordLink = $resetPasswordLink;
     }
 

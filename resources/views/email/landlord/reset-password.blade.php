@@ -2,7 +2,7 @@
 
 # Hello {{ $name }},
 
-We received a request to reset your password for your {{ config('app.name') }} landlord account. If you made this request, you can reset your password by clicking the button below. The link is valid for 10 minutes.
+We received a request to reset your password for your {{ config('app.name') }} landlord account. If you made this request, you can reset your password by clicking the button below. The link is valid for 2 minutes.
 
 Please reset your password by clicking the button below:
 

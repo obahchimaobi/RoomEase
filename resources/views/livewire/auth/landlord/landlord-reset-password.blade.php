@@ -34,7 +34,7 @@
                                 </div>
                             </div>
                             @error('email')
-                                <p class="text-sm text-red-500" id="email-error">Please include a valid email  so we can get back to you</p>
+                                <p class="text-sm text-red-500" id="email-error">{{ $message }}</p>
                             @enderror
                         </div>
                         <!-- End Form Group -->

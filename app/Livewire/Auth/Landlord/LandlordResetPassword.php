@@ -3,10 +3,12 @@
 namespace App\Livewire\Auth\Landlord;
 
 use App\Models\User;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\URL;
 use Livewire\Component;
+use Illuminate\Support\Str;
 use Masmerise\Toaster\Toaster;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Mail;
 
 class LandlordResetPassword extends Component
 {
@@ -29,17 +31,25 @@ class LandlordResetPassword extends Component
 
             $email = $check_email->email;
 
-            $hash = md5($email);
+            $token = Str::random(40);
+    
+            // Store token in password_resets table
+            DB::table('password_reset_tokens')->updateOrInsert(
+                ['email' => $check_email->email],
+                ['token' => $token, 'created_at' => now()]
+            );
 
             $resetPasswordLink = URL::temporarySignedRoute(
                 'password.reset',
-                now()->addMinutes(10),
-                ['email' => $email, 'hash' => $hash],
+                now()->addMinutes(5),
+                ['token' => $token],
             );
 
-            Mail::to($email)->send(new \App\Mail\Landlord\LandlordResetPassword($name, $email, $hash, $resetPasswordLink));
+            Mail::to($email)->send(new \App\Mail\Landlord\LandlordResetPassword($name, $email,$resetPasswordLink));
 
             Toaster::success('A password reset link has been sent to your '.$email.'. Check your inbox.');
+
+            $this->reset(['email']);
         }
     }
 
