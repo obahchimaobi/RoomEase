@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
@@ -16,6 +15,11 @@ class AuthController extends Controller
     public function landlord_login()
     {
         return view('auth.landlord.landlord-login');
+    }
+
+    public function landlord_reset_password()
+    {
+        return view('auth.landlord.landlord-reset-password');
     }
 
     public function student_register()

@@ -3,10 +3,10 @@
 namespace App\Livewire\Auth\Student;
 
 use App\Models\User;
-use Illuminate\Support\Facades\Redirect;
-use Livewire\Component;
-use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
+use Livewire\Component;
 
 class StudentRegister extends Component
 {
@@ -29,7 +29,7 @@ class StudentRegister extends Component
             'password' => 'required|confirmed|min:6',
         ]);
 
-        $name = $validate['first_name'] . ' ' . $validate['last_name'];
+        $name = $validate['first_name'].' '.$validate['last_name'];
 
         User::create([
             'name' => $name,
@@ -39,7 +39,7 @@ class StudentRegister extends Component
             'password' => $validate['password'],
             'type' => 'student',
         ]);
-        
+
         $email = $validate['email'];
         $hash = sha1($email);
 

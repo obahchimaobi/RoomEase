@@ -3,7 +3,6 @@
 namespace App\Mail\Landlord;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -15,8 +14,7 @@ class LandlordResetPassword extends Mailable
 
     /**
      * Create a new message instance.
-    */
-
+     */
     public $name;
 
     public $email;
@@ -36,8 +34,7 @@ class LandlordResetPassword extends Mailable
 
     /**
      * Get the message envelope.
-    */
-
+     */
     public function envelope(): Envelope
     {
         return new Envelope(

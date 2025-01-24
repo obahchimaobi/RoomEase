@@ -27,6 +27,6 @@ Thank you for choosing {{ config('app.name') }} to manage your rental listings!
 {{ config('app.name') }} Team
 
 @component('mail::subcopy')
-If you’re having trouble clicking the "Reset Password" button, copy and paste the following URL into your web browser: [{{ $resetUrl }}]({{ $resetUrl }})
+If you’re having trouble clicking the "Reset Password" button, copy and paste the following URL into your web browser: [{{ $resetPasswordLink }}]({{ $resetPasswordLink }})
 @endcomponent
 @endcomponent

@@ -3,11 +3,10 @@
 namespace App\Livewire\Auth\Landlord;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\URL;
 use Livewire\Component;
-use Masmerise\Toaster\Toaster;
-use Illuminate\Support\Facades\Mail;
 
 class LandlordRegister extends Component
 {
@@ -30,7 +29,7 @@ class LandlordRegister extends Component
             'password' => 'required|min:6|confirmed',
         ]);
 
-        $name = $validate['first_name'] . ' ' . $validate['last_name'];
+        $name = $validate['first_name'].' '.$validate['last_name'];
 
         User::create([
             'name' => $name,
@@ -40,7 +39,7 @@ class LandlordRegister extends Component
             'password' => $validate['password'],
             'type' => 'landlord',
         ]);
-        
+
         $email = $validate['email'];
         $hash = sha1($email);
 

@@ -60,7 +60,7 @@
 
                 <div>
                     <!-- Form -->
-                    <livewire:auth.landlord.landlord-login />
+                    <livewire:auth.landlord.landlord-reset-password />
                     <!-- End Form -->
                 </div>
                 <!-- End Col -->
