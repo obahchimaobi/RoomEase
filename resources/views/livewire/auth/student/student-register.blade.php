@@ -1,11 +1,12 @@
 <div>
     {{-- Do your work, then step back. --}}
-    <form>
+    <form wire:submit.prevent='student_register'>
+        @csrf
         <div class="lg:max-w-lg lg:mx-auto lg:me-0 ms-auto">
             <!-- Card -->
             <div class="p-4 sm:p-7 flex flex-col bg-white rounded-2xl shadow-lg dark:bg-neutral-900">
                 <div class="text-center">
-                    <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">Start your free trial
+                    <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">Sign up
                     </h1>
                     <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
                         Already have an account?
@@ -134,7 +135,7 @@
                         <!-- End Floating Input -->
 
                         @error('email')
-                            <p class="text-sm text-red-500">{{ $message }}</p>
+                            <p class="text-sm text-red-500 col-span-full -mt-3">{{ $message }}</p>
                         @enderror
                         <!-- End Input Group -->
 

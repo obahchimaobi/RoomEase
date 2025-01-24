@@ -50,7 +50,7 @@ class StudentRegister extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'email.landlord.verify',
+            markdown: 'email.student.verify',
         );
     }
 
