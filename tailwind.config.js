@@ -22,4 +22,5 @@ export default {
         require('preline/plugin'),
         require('@tailwindcss/forms'),
     ],
+    darkMode: 'class',
 };

@@ -16,7 +16,7 @@
     @livewireStyles
 </head>
 
-<body class="dark:bg-neutral-950 font-inter text-sm subpixel-antialiased">
+<body class="dark:bg-neutral-950 font-inter  subpixel-antialiased">
     
     @yield('content')
 
