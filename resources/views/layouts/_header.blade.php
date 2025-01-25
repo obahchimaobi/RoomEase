@@ -13,62 +13,108 @@
 
         <!-- Button Group -->
         <div class="flex items-center gap-x-1 lg:gap-x-2 ms-auto py-1 lg:ps-6 lg:order-3 lg:col-span-3">
-            <div class="hs-dropdown [--strategy:absolute] [--flip:false] hs-dropdown-example relative inline-flex">
-                <button id="hs-dropdown-example" type="button"
-                    class="hs-dropdown-toggle py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl bg-white border border-gray-200 text-black hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:hover:bg-white/10 dark:text-white dark:hover:text-white dark:focus:text-white dark:focus:bg-white/10"
-                    aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+            <button type="button"
+                class="hs-dark-mode hs-dark-mode-active:hidden inline-flex items-center gap-x-2 py-2 px-3 bg-transparent rounded-full text-sm text-neutral-500 hover:text-neutral-600 focus:bg-transparent duration-200"
+                data-hs-theme-click-value="dark">
+                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg>
 
-                    Sign in
-                    <svg class="hs-dropdown-open:rotate-180 size-4 text-gray-600 dark:text-neutral-600"
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6"></path>
-                    </svg>
-                </button>
+            </button>
+            <button type="button"
+                class="hs-dark-mode hs-dark-mode-active:inline-flex hidden items-center gap-x-2 py-2 px-3 bg-transparent rounded-full text-sm text-white/50 hover:text-white/70 focus:trnasparent duration-200"
+                data-hs-theme-click-value="light">
+                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2"></path>
+                    <path d="M12 20v2"></path>
+                    <path d="m4.93 4.93 1.41 1.41"></path>
+                    <path d="m17.66 17.66 1.41 1.41"></path>
+                    <path d="M2 12h2"></path>
+                    <path d="M20 12h2"></path>
+                    <path d="m6.34 17.66-1.41 1.41"></path>
+                    <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
 
-                <div class="hs-dropdown-menu transition-[opacity,margin] border duration hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-10 mt-2 min-w-60 bg-white shadow-md rounded-lg p-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700"
-                    role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-example">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-                        href="{{ route('landlord.login') }}">
+            </button>
+            @auth
+                @if (auth()->user()->role == 'landlord')
+                    <a href="{{ route('landlord.dashboard') }}"
+                        class="py-2 px-3 relative inline-flex items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-lime-400 text-black hover:bg-lime-500 focus:outline-none focus:bg-lime-500 transition disabled:opacity-50 disabled:pointer-events-none">
 
-                        As a landlord
+                        Dashboard
                     </a>
-                    <a class="flex items-center gap-x-2.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-                        href="{{ route('student.login') }}">
+                @else
+                    <a href="{{ route('student.dashboard') }}"
+                        class="py-2 px-3 relative inline-flex items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-lime-400 text-black hover:bg-lime-500 focus:outline-none focus:bg-lime-500 transition disabled:opacity-50 disabled:pointer-events-none">
 
-                        As a student
+                        Dashboard
                     </a>
+                @endif
+            @endauth
+
+            @guest
+                <div class="hs-dropdown [--strategy:absolute] [--flip:false] hs-dropdown-example relative inline-flex">
+                    <button id="hs-dropdown-example" type="button"
+                        class="hs-dropdown-toggle py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl bg-white border border-gray-200 text-black hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:hover:bg-white/10 dark:text-white dark:hover:text-white dark:focus:text-white dark:focus:bg-white/10"
+                        aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+
+                        Sign in
+                        <svg class="hs-dropdown-open:rotate-180 size-4 text-gray-600 dark:text-neutral-600"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg>
+                    </button>
+
+                    <div class="hs-dropdown-menu transition-[opacity,margin] border duration hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-10 mt-2 min-w-60 bg-white shadow-md rounded-lg p-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700"
+                        role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-example">
+                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+                            href="{{ route('landlord.login') }}">
+
+                            As a landlord
+                        </a>
+                        <a class="flex items-center gap-x-2.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+                            href="{{ route('student.login') }}">
+
+                            As a student
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="hs-dropdown [--strategy:absolute] [--flip:false] hs-dropdown-example relative inline-flex">
-                <button id="hs-dropdown-example" type="button"
-                    class="hs-dropdown-toggle py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-lime-400 text-black hover:bg-lime-500 focus:outline-none focus:bg-lime-500 transition disabled:opacity-50 disabled:pointer-events-none"
-                    aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                <div class="hs-dropdown [--strategy:absolute] [--flip:false] hs-dropdown-example relative inline-flex">
+                    <button id="hs-dropdown-example" type="button"
+                        class="hs-dropdown-toggle py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-lime-400 text-black hover:bg-lime-500 focus:outline-none focus:bg-lime-500 transition disabled:opacity-50 disabled:pointer-events-none"
+                        aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
 
-                    Sign up
-                    <svg class="hs-dropdown-open:rotate-180 size-4 text-gray-600 dark:text-neutral-600"
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6"></path>
-                    </svg>
-                </button>
+                        Sign up
+                        <svg class="hs-dropdown-open:rotate-180 size-4 text-gray-600 dark:text-neutral-600"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg>
+                    </button>
 
-                <div class="hs-dropdown-menu transition-[opacity,margin] border duration hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-10 mt-2 min-w-52 bg-white shadow-md rounded-lg p-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700"
-                    role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-example">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-                        href="{{ route('landlord.register') }}">
+                    <div class="hs-dropdown-menu transition-[opacity,margin] border duration hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-10 mt-2 min-w-52 bg-white shadow-md rounded-lg p-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700"
+                        role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-example">
+                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+                            href="{{ route('landlord.register') }}">
 
-                        As a landlord
-                    </a>
-                    <a class="flex items-center gap-x-2.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-                        href="{{ route('student.register') }}">
+                            As a landlord
+                        </a>
+                        <a class="flex items-center gap-x-2.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+                            href="{{ route('student.register') }}">
 
-                        As a student
-                    </a>
+                            As a student
+                        </a>
+                    </div>
                 </div>
-            </div>
+            @endguest
 
             <div class="lg:hidden">
                 <button type="button"

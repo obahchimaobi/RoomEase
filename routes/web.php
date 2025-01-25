@@ -16,7 +16,7 @@ START LANDLORD ROUTES
 
 This beginning of this route is for handling all landlord routes
 */
-Route::get('/register/landlord', [AuthController::class, 'landlord_register'])->name('landlord.register');
+Route::get('/register/landlord', [AuthController::class, 'landlord_register'])->name('landlord.register')->middleware(['RedirectLandlord']);
 Route::get('/login/landlord', [AuthController::class, 'landlord_login'])->name('landlord.login');
 Route::get('/forgot-password/landlord', [AuthController::class, 'landlord_reset_password'])->name('landlord.forgot.password');
 

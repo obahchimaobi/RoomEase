@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\IsLandlord;
 use App\Http\Middleware\LandlordIsLoggedin;
+use App\Http\Middleware\RedirectLandlordIfAuthenticated;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -18,6 +19,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'IsLandlord' => IsLandlord::class,
             'LandlordIsLoggedin' => LandlordIsLoggedin::class,
+            'RedirectLandlord' => RedirectLandlordIfAuthenticated::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
