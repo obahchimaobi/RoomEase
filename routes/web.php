@@ -1,13 +1,13 @@
 <?php
 
-use App\Models\User;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Landlord\LandlordController;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
@@ -57,7 +57,7 @@ Route::get('/landlord/reset/password', function () {
 // Landlord Dashboard
 Route::group(['middleware' => 'LandlordIsLoggedin', 'IsLandlord'], function () {
     Route::get('/landlord/dashboard', [LandlordController::class, 'landlord_dashboard'])->name('landlord.dashboard');
-    
+
 });
 
 Route::get('/landlord/logout', function () {

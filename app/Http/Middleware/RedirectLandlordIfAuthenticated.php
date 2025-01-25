@@ -20,7 +20,7 @@ class RedirectLandlordIfAuthenticated
         if (Auth::check()) {
             return Redirect::route('landlord.dashboard');
         }
-        
+
         return $next($request);
     }
 }
