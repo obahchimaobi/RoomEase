@@ -11,10 +11,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    @livewireStyles
 </head>
 
 <body class="dark:bg-neutral-950 font-inter text-sm subpixel-antialiased">
@@ -22,6 +21,7 @@
     @yield('content')
 
     <x-toaster-hub />
+    @livewireScripts
 </body>
 
 </html>

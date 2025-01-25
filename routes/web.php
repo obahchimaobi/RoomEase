@@ -1,16 +1,21 @@
 <?php
 
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Landlord\LandlordController;
-use App\Models\User;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
-// Landlord Auth
+/*
+START LANDLORD ROUTES
+
+This beginning of this route is for handling all landlord routes
+*/
 Route::get('/register/landlord', [AuthController::class, 'landlord_register'])->name('landlord.register');
 Route::get('/login/landlord', [AuthController::class, 'landlord_login'])->name('landlord.login');
 Route::get('/forgot-password/landlord', [AuthController::class, 'landlord_reset_password'])->name('landlord.forgot.password');
@@ -49,7 +54,29 @@ Route::get('/landlord/reset/password', function () {
     return view('email.landlord.reset-password-form');
 })->middleware('signed')->name('landlord.password.reset');
 
-// Student Auth
+// Landlord Dashboard
+Route::group(['middleware' => 'LandlordIsLoggedin', 'IsLandlord'], function () {
+    Route::get('/landlord/dashboard', [LandlordController::class, 'landlord_dashboard'])->name('landlord.dashboard');
+    
+});
+
+Route::get('/landlord/logout', function () {
+    Auth::logout();
+
+    return Redirect::route('home')->success('You have been logged out!');
+})->name('landlord.logout');
+
+/*
+END LANDLORD ROUTES
+
+This is the ending here
+*/
+
+/*
+START STUDENT ROUTES
+
+This beginning of this route is for handling all students routes
+*/
 Route::get('/register/student', [AuthController::class, 'student_register'])->name('student.register');
 Route::get('/login/student', [AuthController::class, 'student_login'])->name('student.login');
 Route::get('/forgot-password/student', [AuthController::class, 'student_reset_password'])->name('student.forgot.password');
@@ -88,7 +115,8 @@ Route::get('/student/reset/password', function () {
     return view('email.student.student-reset-password-form');
 })->middleware('signed')->name('student.password.reset');
 
-// Landlord Dashboard
-Route::group(['middleware' => 'LandlordIsLoggedin', 'IsLandlord'], function () {
-    Route::get('/landlord/dashboard', [LandlordController::class, 'landlord_dashboard'])->name('landlord.dashboard');
-});
+/*
+END STUDENT ROUTES
+
+This is the ending
+*/

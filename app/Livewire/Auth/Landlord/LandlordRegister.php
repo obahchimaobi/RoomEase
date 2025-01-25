@@ -45,7 +45,7 @@ class LandlordRegister extends Component
 
         $verificationUrl = URL::temporarySignedRoute(
             'landlord.email.verify',
-            now()->addMinutes(10),
+            now()->addMinutes(30),
             ['email' => $email, 'hash' => $hash],
         );
 
