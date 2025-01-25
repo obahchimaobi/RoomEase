@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('first_name')->after('name');
             $table->string('last_name')->after('first_name');
             $table->string('phone_number')->nullable();
-            $table->string('type');
+            $table->string('role');
             $table->boolean('profile_completed')->default(false);
         });
     }

@@ -55,7 +55,7 @@
         [&:not(:placeholder-shown)]:pb-2
         autofill:pt-6
         autofill:pb-2"
-                                    placeholder="********">
+                                    placeholder="********" wire:model='email'>
                                 <label for="hs-hero-signup-form-floating-input-new-password"
                                     class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] dark:text-white peer-disabled:opacity-50 peer-disabled:pointer-events-none
           peer-focus:scale-90
@@ -84,7 +84,7 @@
         [&:not(:placeholder-shown)]:pb-2
         autofill:pt-6
         autofill:pb-2"
-                                    placeholder="********">
+                                    placeholder="********" wire:model='password'>
                                 <label for="hs-hero-signup-form-floating-input-current-password"
                                     class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] dark:text-white peer-disabled:opacity-50 peer-disabled:pointer-events-none
           peer-focus:scale-90
@@ -107,7 +107,7 @@
                         <div class="flex items-center">
                             <div class="flex">
                                 <input id="remember-me" name="remember-me" type="checkbox"
-                                    class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                                    class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" wire:model='checkbox'>
                             </div>
                             <div class="ms-3">
                                 <label for="remember-me" class="text-sm dark:text-white">Remember me</label>

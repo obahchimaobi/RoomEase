@@ -33,24 +33,6 @@ Route::get('/landlord/email/verify/{email}/{hash}', function ($email, $hash) {
     return Redirect::route('landlord.login')->success('Your email has been successfully verified.');
 })->middleware('signed')->name('landlord.email.verify');
 
-Route::get('/student/email/verify/{email}/{hash}', function ($email, $hash) {
-    $user = User::where('email', $email)->firstOrFail();
-
-    if (! hash_equals(sha1($user->email), $hash)) {
-        abort(403, 'Invalid verification link.');
-    }
-
-    if ($user->email_verified_at) {
-        return Redirect::route('student.login')->error('Your email has already been verified.');
-    }
-
-    // $user->update(['email_verified_at' => now()]);
-    $user->email_verified_at = now();
-    $user->save();
-
-    return Redirect::route('student.login')->success('Your email has been successfully verified.');
-})->middleware('signed')->name('student.email.verify');
-
 // Landlord Reset Password Link
 Route::get('/landlord/reset/password', function () {
     // get the token from the url
@@ -72,6 +54,24 @@ Route::get('/register/student', [AuthController::class, 'student_register'])->na
 Route::get('/login/student', [AuthController::class, 'student_login'])->name('student.login');
 Route::get('/forgot-password/student', [AuthController::class, 'student_reset_password'])->name('student.forgot.password');
 
+Route::get('/student/email/verify/{email}/{hash}', function ($email, $hash) {
+    $user = User::where('email', $email)->firstOrFail();
+
+    if (! hash_equals(sha1($user->email), $hash)) {
+        abort(403, 'Invalid verification link.');
+    }
+
+    if ($user->email_verified_at) {
+        return Redirect::route('student.login')->error('Your email has already been verified.');
+    }
+
+    // $user->update(['email_verified_at' => now()]);
+    $user->email_verified_at = now();
+    $user->save();
+
+    return Redirect::route('student.login')->success('Your email has been successfully verified.');
+})->middleware('signed')->name('student.email.verify');
+
 // Studente Reset Password Link
 Route::get('/student/reset/password', function () {
     // get the token from the url
@@ -89,4 +89,6 @@ Route::get('/student/reset/password', function () {
 })->middleware('signed')->name('student.password.reset');
 
 // Landlord Dashboard
-Route::get('/landlord/dashboard', [LandlordController::class, 'landlord_dashboard'])->name('landlord.dashboard');
+Route::group(['middleware' => 'LandlordIsLoggedin', 'IsLandlord'], function () {
+    Route::get('/landlord/dashboard', [LandlordController::class, 'landlord_dashboard'])->name('landlord.dashboard');
+});

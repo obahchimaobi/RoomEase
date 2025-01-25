@@ -37,7 +37,7 @@ class StudentRegister extends Component
             'last_name' => $validate['last_name'],
             'email' => $validate['email'],
             'password' => $validate['password'],
-            'type' => 'student',
+            'role' => 'student',
         ]);
 
         $email = $validate['email'];

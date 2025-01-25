@@ -37,7 +37,7 @@ class LandlordRegister extends Component
             'last_name' => $validate['last_name'],
             'email' => $validate['email'],
             'password' => $validate['password'],
-            'type' => 'landlord',
+            'role' => 'landlord',
         ]);
 
         $email = $validate['email'];
