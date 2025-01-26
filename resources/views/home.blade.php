@@ -67,12 +67,12 @@
                 <!-- Form -->
                 <form>
                     <div
-                        class="mx-auto max-w-2xl sm:flex sm:space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100 dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-gray-900/20">
+                        class="mx-auto max-w-2xl sm:flex sm:space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100 dark:bg-neutral-800/30 dark:backdrop-blur-md dark:border-neutral-700 dark:shadow-gray-900/20">
                         <div class="w-full pb-2 sm:pb-0">
                             <label for="hs-hero-name-1" class="block text-sm font-medium dark:text-white"><span
                                     class="sr-only">Your name</span></label>
                             <input type="text" id="hs-hero-name-1"
-                                class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-blue-600"
+                                class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800/30 dark:backdrop-blur-md dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-blue-600"
                                 placeholder="Enter Location...">
                         </div>
                         <div class="whitespace-nowrap pt-2 sm:pt-0 grid sm:block">
@@ -125,7 +125,7 @@
     </div>
     <!-- End Hero -->
 
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mt-6">
+    <div class="max-w-85rem mx-auto px-4 md:px-6 lg:px-8 mt-6">
         <div class="mb-7 flex items-center justify-between">
             <h1 class="dark:text-neutral-200 font-semibold sm:text-3xl text-xl">Available Rooms</h1>
 
