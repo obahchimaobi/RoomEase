@@ -23,7 +23,7 @@
                                     class="text-sm font-light">Demo User</span></h1>
                         </div>
 
-                        <button type="button"
+                        <a href="{{ route('landlord.logout') }}" type="button"
                             class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-5 shrink-0">
@@ -32,8 +32,15 @@
                             </svg>
 
                             Sign out
-                        </button>
+                        </a>
                     </div>
+                </div>
+            </div>
+
+            <div class="grid xl:grid-cols-3 pt-4">
+                <div class="dark:bg-neutral-800 border dark:border-neutral-700 bg-white rounded-xl p-5">
+                    <h1 class="dark:text-neutral-400 text-neutral-500 font-semibold text-sm">Total Tenants</h1>
+                    <h1 class="mt-3 dark:text-neutral-50 font-bold text-3xl">1,000</h1>
                 </div>
             </div>
         </div>
