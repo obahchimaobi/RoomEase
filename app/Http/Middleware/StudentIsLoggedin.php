@@ -5,9 +5,10 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Symfony\Component\HttpFoundation\Response;
 
-class IsLandlord
+class StudentIsLoggedin
 {
     /**
      * Handle an incoming request.
@@ -16,8 +17,8 @@ class IsLandlord
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() && Auth::user()->role != 'landlord') {
-            abort(403, 'ACCESS DENIED');
+        if (! Auth::check()) {
+            return Redirect::route('student.login')->error('Please log into your account!');
         }
 
         return $next($request);

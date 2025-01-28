@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Middleware\IsLandlord;
+use App\Http\Middleware\IsStudent;
 use App\Http\Middleware\LandlordIsLoggedin;
 use App\Http\Middleware\RedirectLandlordIfAuthenticated;
+use App\Http\Middleware\StudentIsLoggedin;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -20,6 +22,8 @@ return Application::configure(basePath: dirname(__DIR__))
             'IsLandlord' => IsLandlord::class,
             'LandlordIsLoggedin' => LandlordIsLoggedin::class,
             'RedirectLandlord' => RedirectLandlordIfAuthenticated::class,
+            'IsStudent' => IsStudent::class,
+            'StudentIsLoggedin' => StudentIsLoggedin::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

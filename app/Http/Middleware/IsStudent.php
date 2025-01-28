@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class IsLandlord
+class IsStudent
 {
     /**
      * Handle an incoming request.
@@ -16,10 +16,10 @@ class IsLandlord
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() && Auth::user()->role != 'landlord') {
+        if (! Auth::check() && ! Auth::user()->role == 'student') {
             abort(403, 'ACCESS DENIED');
         }
-
+        
         return $next($request);
     }
 }

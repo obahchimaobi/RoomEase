@@ -3,10 +3,11 @@
 namespace App\Livewire\Auth\Student;
 
 use App\Models\User;
+use Livewire\Component;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\URL;
-use Livewire\Component;
 
 class StudentRegister extends Component
 {
@@ -39,6 +40,8 @@ class StudentRegister extends Component
             'password' => $validate['password'],
             'role' => 'student',
         ]);
+
+        // DB::table('student_profiles')->insert(['user_id' => ]);
 
         $email = $validate['email'];
         $hash = sha1($email);
